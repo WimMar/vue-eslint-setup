@@ -1,7 +1,7 @@
 {
-  "name": "vue-eslint-setup",
-  "version": "1.0.0",
-  "description": "ESLint & Prettier for vue-cli",
+  "name": "@wimmar/eslint-config-vue",
+  "version": "1.0.1",
+  "description": "ESLint & Prettier & Babel config for vue-cli",
   "keywords": [
     "javascript",
     "ecmascript",
@@ -17,15 +17,20 @@
   "author": "Wim Marynissen <wimmar0@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix"
+    "lint": "vue-cli-service lint"
   },
   "peerDependencies": {
-    "@vue/cli-plugin-eslint": "^3.3.0",
-    "@vue/cli-plugin-pwa": "^3.5.1",
-    "@vue/cli-service": "^3.0.1",
-    "@vue/eslint-config-prettier": "^4.0.1",
-    "babel-eslint": "^10.0.1",
-    "babel-plugin-transform-remove-console": "^6.9.4",
+    "@vue/cli-plugin-eslint":"^3.6.0",
+    "@vue/cli-service":"^3.6.0",
+    "@vue/eslint-config-prettier":"^4.0.1",
+    "babel-eslint":"^10.0.1",
+    "babel-plugin-transform-remove-console":"^6.9.4"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-eslint":"^3.6.0",
+    "@vue/cli-service":"^3.6.0",
+    "@vue/eslint-config-prettier":"^4.0.1",
+    "babel-eslint":"^10.0.1",
+    "babel-plugin-transform-remove-console":"^6.9.4"
   }
 }

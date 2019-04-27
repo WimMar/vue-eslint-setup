@@ -4,7 +4,7 @@ module.exports = {
     node: true
   },
   extends: [
-    "plugin:vue/essential",
+    "plugin:vue/recommended",
     "@vue/prettier"
   ],
   rules: {
@@ -52,7 +52,16 @@ module.exports = {
     "max-len": 0,
     "import/extensions": 0,
     "no-underscore-dangle": 0,
-    "consistent-return": 0
+    "consistent-return": 0,
+    "vue/html-indent": 0,
+    "vue/attributes-order": 0,  
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": 5,
+      "multiline": {
+        "max": 5,
+        "allowFirstLine": true
+      }
+    }]
   },
   parserOptions: {
     parser: "babel-eslint"
