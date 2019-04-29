@@ -3,10 +3,7 @@ module.exports = {
   env: {
     node: true
   },
-  extends: [
-    "plugin:vue/recommended",
-    "@vue/prettier"
-  ],
+  extends: ["plugin:vue/recommended", "@vue/prettier"],
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
@@ -20,12 +17,6 @@ module.exports = {
     "no-var": "error",
     "no-await-in-loop": 0,
     "no-return-assign": ["error", "except-parens"],
-    "no-restricted-syntax": [
-      2,
-      "ForInStatement",
-      "LabeledStatement",
-      "WithStatement"
-    ],
     "no-unused-vars": [
       1,
       {
@@ -40,11 +31,17 @@ module.exports = {
         allowTaggedTemplates: true
       }
     ],
-    "no-param-reassign": [
-      2,
-      {
-        props: false
-      }
+    // "no-param-reassign": [
+    //   2,
+    //   {
+    //     props: false
+    //   }
+    // ],
+    "no-restricted-syntax": [
+      1,
+      "ForInStatement",
+      "LabeledStatement",
+      "WithStatement"
     ],
     "import/prefer-default-export": 0,
     "func-names": 0,
@@ -53,15 +50,20 @@ module.exports = {
     "import/extensions": 0,
     "no-underscore-dangle": 0,
     "consistent-return": 0,
+    "no-param-reassign": 0,
     "vue/html-indent": 0,
-    "vue/attributes-order": 0,  
-    "vue/max-attributes-per-line": ["error", {
-      "singleline": 5,
-      "multiline": {
-        "max": 5,
-        "allowFirstLine": true
+    "vue/attributes-order": 0,
+    "vue/order-in-components": 0,
+    "vue/max-attributes-per-line": [
+      "error",
+      {
+        singleline: 5,
+        multiline: {
+          max: 5,
+          allowFirstLine: true
+        }
       }
-    }]
+    ]
   },
   parserOptions: {
     parser: "babel-eslint"
